@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Text to Response</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>Ask the Model</h1>
+			<form id="ask-form">
+				<label for="input-text">Enter your question or prompt</label>
+				<textarea
+					id="input-text"
+					name="text"
+					rows="5"
+					placeholder="Type your text here..."
+					required
+				></textarea>
+				<button type="submit" id="submit-btn">Submit</button>
+			</form>
+
+			<p id="status" aria-live="polite"></p>
+			<section id="result-section" hidden>
+				<h2>Responses</h2>
+				<div class="results-grid">
+					<article class="result-card">
+						<h3>Without Tool (`/ask_without`)</h3>
+						<pre id="result-without"></pre>
+					</article>
+					<article class="result-card">
+						<h3>With Tool (`/ask_with`)</h3>
+						<pre id="result-with"></pre>
+					</article>
+				</div>
+			</section>
+		</main>
+
+		<script src="/script.js"></script>
+	</body>
+</html>

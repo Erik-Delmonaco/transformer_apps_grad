@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Text Classifier</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>Text Classifier</h1>
+			<form id="classify-form">
+				<label for="input-text">Enter text</label>
+				<textarea
+					id="input-text"
+					name="text"
+					rows="5"
+					placeholder="Type text to classify..."
+					required
+				></textarea>
+				<button type="submit" id="submit-btn">Submit</button>
+			</form>
+
+			<p id="status" aria-live="polite"></p>
+			<section id="result-section" hidden>
+				<h2>Model response</h2>
+				<pre id="result"></pre>
+			</section>
+		</main>
+
+		<script src="/script.js"></script>
+	</body>
+</html>
